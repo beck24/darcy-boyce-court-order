@@ -1,0 +1,22 @@
+:root {
+    --main-bg-color: #232323;
+}
+
+body {
+    background-color: var(--main-bg-color);
+    color: #f1f1f1;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.card {
+    color: #232323;
+}
+
+.text-columns {
+    column-count: 1;
+    column-gap: 0;
+}
+
+a {
+    color: #fcfcfc;
+}
