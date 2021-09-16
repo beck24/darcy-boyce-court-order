@@ -45,7 +45,7 @@
                 </a>
 
                 @if($position)
-                <div class="text center mt-3 pt-3">
+                <div class="text center mt-3 pt-3" id="position-log" style="opacity: 0; transition: opacity 0.3s ease 1s">
                     <h3>Location has been logged.</h3>
 
                     <div class="table-responsive">
@@ -90,6 +90,7 @@
 
         const timerElem = document.querySelector('.timer');
         const imgElem = document.getElementById('court-order');
+        const positionElem = document.getElementById('position-log');
 
         const timeSince = () => {
             const nowUTC = Date.now();
@@ -123,6 +124,10 @@
 
             timerElem.style.opacity = 1;
             imgElem.style.opacity = 1;
+
+            if (positionElem) {
+                positionElem.style.opacity = 1;
+            }
         }
 
         setInterval(timeSince, 1000);
