@@ -10,10 +10,10 @@ class VisitorController extends Controller
 {
     public function index(Request $request) {
         $position = null;
-        
+
         if (config('app.log_visitors')) {
             try {
-                $position = Location::get();
+                $position = Location::get($request->ip());
 
                 Visitor::create([
                     'ip' => $position->ip,
